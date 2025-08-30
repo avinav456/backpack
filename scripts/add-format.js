@@ -8,7 +8,7 @@ function addFormatScript(packageJsonPath) {
   try {
     const absolutePath = path.resolve(packageJsonPath); // Get the absolute path
     const packageJson = require(absolutePath);
-    if (!packageJson.scripts) {
+    if (!packageJson.scripts)  {
       packageJson.scripts = {};
     }
     packageJson.scripts.format = `npx prettier --write --config ../../.prettierrc --ignore-path ../../.prettierignore --log-level error`; // Adjust the prettier command as needed
